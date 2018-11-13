@@ -1,54 +1,70 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Brown Bears</title>
+<style>
+body {background-color: gray;}
+h1   {color: red;}
+h2   {color: red;}
+h3   {color: red;}
+p    {color: blue;}
+</style>
+<title>Mousesports</title>
 </head>
 
 <body>
   <nav>
-    <a href="./index.html">Brown Bear</a>
-    <a href="./aboutme.html">About Me</a>
+    <a href="./index.html">Eriku tiim</a>
+    <a href="./aboutme.html">Avaleht</a>
   </nav>
-  <h1>The Brown Bear</h1>
+  <h1>Mousesports</h1>
   <nav>
     <ul>
-      <li><a href="#introduction">Introduction</a></li>
-      <li><a href="#habitat">Habitat</a></li>
-      <li><a href="#media">Media</a></li>
+      <li><a href="#Liikmed">Liikmed</a></li>
+      <li><a href="#teised">Erinevad teised mängud, milles võisteldakse</a></li>
+      <li><a href="#videod">Videod ja pildid</a></li>
     </ul>
   </nav>
-  <div id="introduction">
-    <h2>About Brown Bears</h2>
+    <h2>Ajaloost</h2>
     <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
       Atlas bear and the Himalayan brown bear.</p>
-    <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">Learn More</a>
-    <h3>Species</h3>
+    <a href="https://liquipedia.net/counterstrike/Mousesports" target="_blank">Vaata lisaks</a>
+<div id="Liikmed">
+    <h3>Liikmed(Counter Strike tiim)</h3>
     <ul>
-      <li>Arctos</li>
-      <li>Collarus</li>
-      <li>Horribilis</li>
-      <li>Nelsoni (extinct)</li>
+      <li>Sergey Bezhanov "Imbt" (kapten)</li>
+      <li>Chris de Jong "chrisJ"</li>
+      <li>Tomáš Šťastný "oskar"</li>
+      <li>Robin Kool "ropz"</li>
+      <li>Miikka Kemppi "suNny"</li>
+      <li>Martin Styk "STYKO"</li>
     </ul>
-    <h3>Features</h3>
+    <h3>Mängurite omadused</h3>
     <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
   </div>
   <div id="habitat">
-    <h2>Habitat</h2>
-    <h3>Countries with Large Brown Bear Populations</h3>
+    <h2>Ajaloost</h2>
+    <h3>mdea</h3>
     <ol>
       <li>Russia</li>
       <li>United States</li>
       <li>Canada</li>
     </ol>
-    <h3>Countries with Small Brown Bear Populations</h3>
+    <h3>Robini mõju tiimile</h3>
     <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
   </div>
-  <div id="media">
-    <h2>Media</h2>
+  <div id="videod">
+    <h2>Videod ja pildid</h2>
     <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" />
-    <video src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" height="240" width="320" controls>Video not supported</video>
+    <iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
   </div>
 </body>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
 
 </html>
