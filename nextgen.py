@@ -73,17 +73,19 @@ while not välja: # Main mäng
         del keha[0]
     keha.append([pea.location[0],pea.location[1]]) #Lisab keha listi juurde, keha pikemaks
     pea.liikumine()
-            
+           
     ekraan.fill([255,255,255]) #ekraanivärv(taust)
-
-    for osa in keha:
+    font = pygame.font.Font(None,20)
+    score_text = font.render("Score: " + str(len(keha) - 2) + "",1,(random.randint(0,250),random.randint(0,250),random.randint(0,250)))#Teeb vikerkaare :)))
+    ekraan.blit(score_text,[390,5])
+    for osa in keha: #Surm
         pygame.draw.rect(ekraan,[0,0,0],[osa[0],osa[1],20,20],0)
         if osa != keha[0] and [osa[0],osa[1]] == pea.location:
             välja = True
             
     pygame.draw.rect(ekraan,[100,0,0],[pea.location[0],pea.location[1],20,20],0) #Näitamine ekraanil(joonistamine peavärvid)
     pygame.draw.rect(ekraan,[100,25,67],[söögi_asetsus[0],söögi_asetsus[1],20,20],0) #Näitamine ekraanil(joonistamine söök, värvid)
-    pygame.display.flip()   #Uuendab ekraanil toimuvat 
+    pygame.display.flip()   #Uuendab ekraanil toimuvat
 
 
 pygame.quit()
