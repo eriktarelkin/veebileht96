@@ -6,7 +6,7 @@ pygame.display.set_caption('ErikJaKertSneeeeeiK')
 ekraan = pygame.display.set_mode([450,450]) #Loob ekraani mängu jaoks
 välja = False #välja kui uss sööb ennast ja nupuvajutus
 ajanäitaja = pygame.time.Clock() # et teha tick ja näha normaalseslt ussi
-
+kollane = (255,255,0)
 class Pea():
     def __init__(madu_uss):
         madu_uss.location = [random.randint(4,10) * 20,random.randint(4,10) * 20]
@@ -79,12 +79,12 @@ while not välja: # Main mäng
     score_text = font.render("Score: " + str(len(keha) - 2) + "",1,(random.randint(0,250),random.randint(0,250),random.randint(0,250)))#Teeb vikerkaare :)))
     ekraan.blit(score_text,[390,5])
     for osa in keha: #Surm
-        pygame.draw.rect(ekraan,[0,0,0],[osa[0],osa[1],20,20],0)
+        pygame.draw.rect(ekraan,[255,255,0],[osa[0],osa[1],20,20],0) #Keha tükkide suurus, proovib värvi lisada
         if osa != keha[0] and [osa[0],osa[1]] == pea.location:
             välja = True
             
-    pygame.draw.rect(ekraan,[100,0,0],[pea.location[0],pea.location[1],20,20],0) #Näitamine ekraanil(joonistamine peavärvid)
-    pygame.draw.rect(ekraan,[100,25,67],[söögi_asetsus[0],söögi_asetsus[1],20,20],0) #Näitamine ekraanil(joonistamine söök, värvid)
+    pygame.draw.rect(ekraan,[100,100,100],[pea.location[0],pea.location[1],20,20],0) #Näitamine ekraanil(joonistamine peavärvid)
+    pygame.draw.rect(ekraan,[100,100,100],[söögi_asetsus[0],söögi_asetsus[1],20,20],0) #Näitamine ekraanil(joonistamine söök, värvid)
     pygame.display.flip()   #Uuendab ekraanil toimuvat
 
 
