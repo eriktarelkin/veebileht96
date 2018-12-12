@@ -6,6 +6,8 @@ pygame.display.set_caption('ErikJaKertSneeeeeiK')
 ekraan = pygame.display.set_mode([450,450]) #Loob ekraani mängu jaoks
 välja = False #välja kui uss sööb ennast ja nupuvajutus
 ajanäitaja = pygame.time.Clock() # et teha tick ja näha normaalseslt ussi
+peapilt = pygame.image.load('homer.png')
+söögipilt = pygame.image.load('donut.png')
 
 class Pea():
     def __init__(madu_uss):
@@ -13,7 +15,6 @@ class Pea():
         madu_uss.direction = random.randint(0,20)
         return
         
-
     def liikumine(madu_uss): #Põhiosa ussi liikumiseks
         pööratud = False
         for nupuvajutus in pygame.event.get():
@@ -58,7 +59,7 @@ keha = []
 pea = Pea()
 pöörded = 0
 söögi_asetsus = [random.randint(1, 20) * 20,random.randint(1, 20) * 20] #Söök random kohta
-
+gameDisplay.blit(peapilt, (madu_uss.location))
 while not välja: # Main mäng
     ajanäitaja.tick(10)
     pöörded += 1
