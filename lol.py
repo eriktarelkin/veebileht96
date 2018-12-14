@@ -1,1 +1,0 @@
-print("Damn, nibbers here and they have guns.")
